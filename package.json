@@ -1,0 +1,11 @@
+{
+  "name": "karma-starter-kit",
+  "version": "0.1.0",
+  "description": "Starter kit for testing front end development with the karma test runner.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Victor Aponte",
+  "license": "MIT"
+}
