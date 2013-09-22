@@ -15,7 +15,8 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "~2.0.3"
+    "jquery": "~2.0.3",
+    "underscore": "~1.5.2"
   },
   "devDependencies": {
     "jasmine-jquery": "~1.5.8"
