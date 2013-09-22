@@ -7,6 +7,15 @@ module.exports = function(grunt){
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
+    clean: {
+      all: {
+        files: [{
+          dot: true,
+          src: [ './.tmp', './dist' ]
+        }]
+      }
+    },
+
     jshint: {
       jshintrc: '.jshintrc',
       all: [
