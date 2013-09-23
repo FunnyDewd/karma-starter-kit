@@ -24,7 +24,27 @@ module.exports = function(grunt){
         '!source/vendor/**/*.js',
         'test/**/*.js'
       ]
-    }
+    },
+
+    // Connect server to serve up local files.
+    connect: {
+      options: {
+        port: 9000,
+        // Using 0.0.0.0 allows access from outside
+        hostname: '0.0.0.0'
+      },
+      livereload: {
+        options: {
+          middleware: function(connect) {
+            return [
+              require('connect-livereload')(),
+              mountFolder(connect, './.tmp/'),
+              mountFolder(connect, './source/')
+            ];
+          }
+        }
+      }
+    },
   });
 
   // load the plugins used by grunt

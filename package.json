@@ -25,6 +25,7 @@
     "karma": "~0.10.2",
     "grunt-karma": "~0.6.2",
     "grunt-open": "~0.2.2",
-    "phantomjs": "~1.9.2-1"
+    "phantomjs": "~1.9.2-1",
+    "connect-livereload": "~0.3.0"
   }
 }
