@@ -16,6 +16,18 @@ module.exports = function(grunt){
       }
     },
 
+    watch: {
+      options: {
+        nospawn: true,
+        livereload: true
+      },
+
+      js: {
+        files: [ './.tmp/js/**/*.js', './source/js/**/*.js' ],
+        tasks: [ 'jshint:all' ]
+      },
+    },
+
     jshint: {
       jshintrc: '.jshintrc',
       all: [
@@ -24,6 +36,22 @@ module.exports = function(grunt){
         '!source/vendor/**/*.js',
         'test/**/*.js'
       ]
+    },
+
+    // Set up the karma test runner.
+    karma: {
+      once: {
+        configFile: 'karma.conf.js',
+        runnerPort: 9999,
+        singleRun: true,
+        browsers: ['PhantomJS']
+      },
+
+      watch: {
+        configFile: 'karma.conf.js',
+        runnerPort: 9999,
+        singleRun: false
+      }
     },
 
     // Connect server to serve up local files.
@@ -45,6 +73,12 @@ module.exports = function(grunt){
         }
       }
     },
+
+    open: {
+      server: {
+        path: 'http://localhost:<%= connect.options.port %>/'
+      }
+    }
   });
 
   // load the plugins used by grunt
@@ -57,4 +91,5 @@ module.exports = function(grunt){
 
 
   // use grunt.registerTask() to register custom tasks
+  grunt.registerTask('server', ['jshint:all', 'connect:livereload', 'open:server', 'watch']);
 };
