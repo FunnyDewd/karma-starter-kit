@@ -18,6 +18,18 @@ module.exports = function(config) {
       'source/vendor/jquery/jquery.js',
       'source/vendor/jasmine-jquery/lib/jasmine-jquery.js',
       'source/js/**/*.js',
+      {
+        pattern: 'source/css/**/*.css',
+        watched: true,
+        served: true,
+        included: false
+      },
+      {
+        pattern: 'test/fixtures/**/*.html',
+        watched: true,
+        served: true,
+        included: false
+      },
       'test/helpers/**/*.js',
       'test/**/*Spec.js'
     ],
