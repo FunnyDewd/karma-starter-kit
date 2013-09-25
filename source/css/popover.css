@@ -1,0 +1,102 @@
+@charset "utf-8";
+.popover-content {
+  display: none;
+}
+
+.popover-link {
+  color: #56778e;
+  border-bottom: 1px dashed #56778e;
+}
+.popover {
+  position: absolute;
+  display: none;
+  top: 260px;
+  left: 550px;
+  width: 350px;
+  max-height: 300px;
+  padding: 15px 20px 10px 20px;
+  background-color: #d8d8d6;
+  border-radius: 2px;
+  box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25);
+  border: 1px solid #bbbbbb;
+  z-index: 5;
+  font-size: 14px;
+}
+.popover .popover-container {
+  max-height: 275px;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+.popover .popover-container.more-above:before,
+.popover .popover-container.more-below:after {
+  font-family: 'courier new';
+  font-style: normal;
+  font-weight: normal;
+  text-align: right;
+  padding-right: 15px;
+  color: #858789;
+  width: 100%;
+  height: 15px;
+  position: absolute;
+}
+.popover .popover-container.more-above:before {
+  content: '↑';
+  font-family: 'courier new';
+  top: 15px;
+  left: 0;
+}
+.popover .popover-container.more-below:after {
+  content: '↓';
+  font-family: "courier new";
+  bottom: 15px;
+  left: 0;
+  padding-bottom: 10px;
+}
+.popover .popover-content {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: none;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  font-size: 1.077em;
+  text-shadow: none;
+}
+.popover.select .popover-content ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.popover.select .popover-content li a {
+  display: block;
+  padding-bottom: 20px;
+  font-weight: bold;
+  font-size: 1.077em;
+  color: #44464a;
+}
+.popover.below-link:before {
+  content: url(../images/popover-notch.svg);
+  width: 20px;
+  height: 15px;
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  z-index: 10;
+}
+.popover.above-link:after {
+  content: url(../images/popover-notch.svg);
+  width: 20px;
+  height: 15px;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  z-index: 10;
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}

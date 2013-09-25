@@ -1,0 +1,69 @@
+<div id="defaultContainer">
+  <p><a class="popover-link disclosure" data-content-id="available-balance" href="#">Available Balance</a></p>
+
+  <p><a class="popover-link select" data-content-id="change-account-select" href="#">Change Account Group</a></p>
+  <p><a class="popover-link disclosure" data-content-id="available-balance" href="#">Available Balance</a></p>
+</div>
+
+<div data-content-id="available-balance" class="popover-content">
+  <p>
+    Available balance is the most current record we have about the 
+    funds that are available for withdrawal from your account. 
+  </p>
+  <p>
+    Available balance includes most “pending” transactions, 
+    such as deposits made during the day (cash or transfers) 
+    that are available for immediate withdrawal and pending 
+    withdrawals such as Bill Pay and debit card transactions 
+    that have been authorized (but not yet paid from your account). 
+  </p>
+  <p>
+    Available balance does not reflect outstanding checks, 
+    automatic bill payments that you have authorized, or certain 
+    debit card transactions that have been authorized by the Bank 
+    but not yet submitted for payment by the merchant, or that have 
+    never been submitted for authorization.
+  </p>
+</div>
+
+
+<div data-content-id="change-account-select" class="popover-content">
+  <ul>
+    <li><a href="#" data-value="all">All Accounts</a></li>
+    <li><a href="#" data-value="personal">Personal Accounts</a></li>
+    <li><a href="#" data-value="business">Business Accounts</a></li>
+    <li><a href="#" data-value="mj_checking">Mary Jane's Checking</a></li>
+    <li><a href="#" data-value="may_mortgage">Aunt May's Mortgage</a></li>
+    <li><a href="#" data-value="spidey_savings">Spidey Savings</a></li>
+    <li><a href="#" data-value="sandman_cd">Sandman CD</a></li>
+    <li><a href="#" data-value="ock_ira">Doc Ock IRA</a></li>
+  </ul>
+</div>
+
+
+
+<style>
+  body,
+  #defaultContainer {
+    height: 768px;
+    width: 1024px;
+  }
+
+  #defaultContainer {
+    position: relative;
+  }
+
+  .popover-link {
+    position: absolute;
+    left: center;
+    display: block;
+  }
+
+  .popover-link:first-child {
+    top: 0;
+  }
+
+  .popover-link:last-child {
+    bottom: 0;
+  }
+</style>

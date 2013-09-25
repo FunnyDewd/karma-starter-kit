@@ -1,1 +1,103 @@
-/**** Main.css ****/
+@charset "utf-8";
+html {
+  text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+}
+body {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 1.5em;
+  line-height: 1.5;
+  padding: 30px;
+  color: #44464a;
+}
+a {
+  color: #0f4b77;
+  text-decoration: none;
+  font-weight: normal;
+  text-shadow: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin: 0 0 0.5em 0;
+}
+/********** Convenience classes ************/
+/* Micro clearfix from h5bp.com */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.lt-ie8 .clearfix {
+  zoom: 1;
+}
+/* hide content from both screenreaders and browsers. hidden HTML attribute is also useful */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+/* hide content from both screenreaders and browsers, but maintain the layout */
+.invisible {
+  visibility: hidden;
+}
+/* Hide visually, but have it available for screenreaders */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  /* extend to allow element to get the focus when using the keyboard */
+
+}
+.visuallyhidden .focusable:active,
+.visuallyhidden .focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.row {
+  width: 100%;
+  clear: both;
+}
+.row:before,
+.row:after {
+  content: " ";
+  display: table;
+}
+.row:after {
+  clear: both;
+}
+.lt-ie8 .row {
+  zoom: 1;
+}
+.column {
+  float: left;
+}
+.column > * {
+  padding: 0 10px;
+}
+

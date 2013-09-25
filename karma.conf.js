@@ -16,6 +16,7 @@ module.exports = function(config) {
     files: [
       'source/vendor/underscore/underscore.js',
       'source/vendor/jquery/jquery.js',
+      'source/vendor/hammerjs/dist/jquery.hammer.js',
       'source/vendor/jasmine-jquery/lib/jasmine-jquery.js',
       'source/js/**/*.js',
       {
@@ -43,7 +44,7 @@ module.exports = function(config) {
 
     // test results reporter to use
     // possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
-    reporters: ['progress'],
+    reporters: ['dots'],
 
 
     // web server port
