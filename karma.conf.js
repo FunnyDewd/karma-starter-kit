@@ -49,6 +49,11 @@ module.exports = function(config) {
     // web server port
     port: 9876,
 
+    // Preprocessors support
+    // We want to cancel any prepreprocessor applied to HTML files.
+    preprocessors: {
+      '**/*.html': []
+    },
 
     // enable / disable colors in the output (reporters and logs)
     colors: true,
