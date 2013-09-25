@@ -22,6 +22,14 @@ module.exports = function(grunt){
         livereload: true
       },
 
+      html: {
+        files: [ './.tmp/**/*.html', './source/**/*.html', '!./source/vendor/**/*.html' ]
+      },
+
+      css: {
+        files: [ './.tmp/css/**/*.css', './source/css/**/*.css' ]
+      },
+
       js: {
         files: [ './.tmp/js/**/*.js', './source/js/**/*.js' ],
         tasks: [ 'jshint:all' ]
