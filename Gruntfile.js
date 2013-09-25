@@ -48,7 +48,7 @@ module.exports = function(grunt){
 
     // Set up the karma test runner.
     karma: {
-      once: {
+      unit: {
         configFile: 'karma.conf.js',
         runnerPort: 9999,
         singleRun: true,
@@ -100,4 +100,7 @@ module.exports = function(grunt){
 
   // use grunt.registerTask() to register custom tasks
   grunt.registerTask('server', ['jshint:all', 'connect:livereload', 'open:server', 'watch']);
+  grunt.registerTask('default', ['jshint:all', 'karma:watch']);
+  grunt.registerTask('test:once', ['jshint:all', 'karma:unit']);
+  grunt.registerTask('test:ci', ['jshint:all', 'karma:watch']);
 };
